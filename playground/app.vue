@@ -2,6 +2,4 @@
   <div>Nuxt module playground!</div>
 </template>
 
-<script lang="ts" setup>
-useNuxtApp().$http('')
-</script>
+<script lang="ts" setup></script>
