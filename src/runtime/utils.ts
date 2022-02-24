@@ -1,20 +1,11 @@
-type FetchParams = Parameters<typeof $fetch>
+function bind<T>(func: Function, context: ThisType<T>) {
+  return function wrap() {
+    const args = new Array(arguments.length)
 
-export const http = (request: FetchParams[0], options: FetchParams[1] = {}) => {
-  const $config = useRuntimeConfig()
+    for (let i = 0, len = args.length; i < len; i++) {
+      args[i] = arguments[i]
+    }
 
-  return $fetch(request, {
-    baseURL: $config.http.baseURL,
-    ...options,
-  })
-}
-
-http.create = (config: FetchParams[1]) => {
-  // 基于 config 返回类似 http 的新请求实例
-  return (request: FetchParams[0], options: FetchParams[1] = {}) => {
-    return $fetch(request, {
-      ...config,
-      ...options,
-    })
+    return func.apply(context, args)
   }
 }

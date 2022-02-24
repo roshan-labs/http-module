@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from '#app'
 
-import { http } from './utils'
+import { http } from './http'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.provide('http', http)
