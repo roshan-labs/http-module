@@ -1,11 +1,13 @@
 import { defineNuxtPlugin } from '#app'
 
-import { http } from './composables'
+import { http } from './utils'
 
-export default defineNuxtPlugin(() => {
-  return {
-    provide: {
-      http,
-    },
-  }
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.provide('http', http)
 })
+
+declare module '#app' {
+  interface NuxtApp {
+    $http: typeof http
+  }
+}
