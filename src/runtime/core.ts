@@ -1,5 +1,8 @@
-type FetchOptions = Parameters<typeof $fetch>[1]
+import { FetchOptions } from './types'
 
+/**
+ * 根据 Nuxt $fetch 封装请求类
+ */
 export class Http {
   options: FetchOptions
 
@@ -7,7 +10,7 @@ export class Http {
     this.options = options
   }
 
-  public request(url: string, options?: FetchOptions) {
+  public request(url: string, options: FetchOptions = {}) {
     return $fetch(url, {
       ...this.options,
       ...options,
