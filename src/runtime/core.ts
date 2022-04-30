@@ -1,69 +1,45 @@
-import { FetchOptions, SearchParams } from './types'
+import { to } from 'await-to-js'
 
-/**
- * 根据 Nuxt $fetch 封装请求类
- */
+import { FetchOptions } from './types'
+
 export class Http {
-  options: FetchOptions
+  public options: FetchOptions
 
   constructor(options: FetchOptions) {
     this.options = options
   }
 
-  private fetchOptions(params?: SearchParams, method: string = 'GET') {
-    const options = {
-      ...this.options,
-    }
+  // fetchOptions(params?: SearchParams, method: string = 'GET') {
+  //   const options = {
+  //     ...this.options,
+  //   }
 
-    options.method = method
+  //   options.method = method
 
-    if (params) {
-      if (['POST', 'PUT', 'PATCH'].includes(method)) {
-        options.body = params
-      } else {
-        options.params = params
-      }
-    }
+  //   if (params) {
+  //     if (['POST', 'PUT', 'PATCH'].includes(method)) {
+  //       options.body = params
+  //     } else {
+  //       options.params = params
+  //     }
+  //   }
 
-    return options
+  //   return options
+  // }
+
+  public request<R>(url: string, options: FetchOptions = {}) {
+    return to<R>(
+      $fetch(url, {
+        ...this.options,
+        ...options,
+      })
+    )
   }
 
-  public request(url: string, options: FetchOptions = {}) {
-    return $fetch(url, {
+  public useRequest<R>(url: string, options: FetchOptions = {}) {
+    return useFetch<R>(url, {
       ...this.options,
       ...options,
     })
-  }
-
-  public async get(url: string, params?: SearchParams) {
-    try {
-      return await $fetch(url, this.fetchOptions(params))
-    } catch (error) {
-      return error
-    }
-  }
-
-  public async post(url: string, params?: SearchParams) {
-    try {
-      return await $fetch(url, this.fetchOptions(params, 'POST'))
-    } catch (error) {
-      return error
-    }
-  }
-
-  public async put(url: string, params?: SearchParams) {
-    try {
-      return await $fetch(url, this.fetchOptions(params, 'PUT'))
-    } catch (error) {
-      return error
-    }
-  }
-
-  public async delete(url: string, params?: SearchParams) {
-    try {
-      return await $fetch(url, this.fetchOptions(params, 'DELETE'))
-    } catch (error) {
-      return error
-    }
   }
 }

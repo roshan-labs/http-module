@@ -4,6 +4,7 @@ specifiers:
   '@nuxt/kit': ^3.0.0-rc.1
   '@nuxt/module-builder': latest
   '@nuxtjs/eslint-config-typescript': latest
+  await-to-js: ^3.0.0
   cz-conventional-changelog: ^3.3.0
   defu: ^6.0.0
   eslint: latest
@@ -15,6 +16,7 @@ specifiers:
 
 dependencies:
   '@nuxt/kit': 3.0.0-rc.1
+  await-to-js: 3.0.0
   defu: 6.0.0
 
 devDependencies:
@@ -1463,6 +1465,11 @@ packages:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /await-to-js/3.0.0:
+    resolution: {integrity: sha512-zJAaP9zxTcvTHRlejau3ZOY4V7SRpiByf3/dxx2uyKxxor19tpmpV2QRsTKikckwhaPmr2dVpxxMr7jOCYVp5g==}
+    engines: {node: '>=6.0.0'}
+    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}

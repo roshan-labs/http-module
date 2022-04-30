@@ -1,19 +1,12 @@
 import { defineNuxtPlugin } from '#app'
 
 import { createInstance } from './http'
-import { Instance } from './types'
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
-  const http = createInstance({
-    ...config.http,
-  })
+  const http = createInstance(config.public.http)
 
-  nuxtApp.provide('http', http)
-})
-
-declare module '#app' {
-  interface NuxtApp {
-    $http: Instance
+  return {
+    provide: { http },
   }
-}
+})

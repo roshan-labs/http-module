@@ -1,13 +1,10 @@
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
-import { addPlugin, defineNuxtModule } from '@nuxt/kit'
+import { addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
 import { defu } from 'defu'
 
 import { name, version } from '../package.json'
+import { ModuleOptions } from './runtime/types'
 
-export interface ModuleOptions {
-  baseURL: string
-}
+export { ModuleOptions }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -19,13 +16,13 @@ export default defineNuxtModule<ModuleOptions>({
     baseURL: '/',
   },
   setup(options, nuxt) {
-    nuxt.options.publicRuntimeConfig.http = options = defu(nuxt.options.publicRuntimeConfig.http, {
-      baseURL: options.baseURL,
-    })
+    nuxt.options.runtimeConfig.public.http = options = defu(
+      nuxt.options.runtimeConfig.public.http,
+      { baseURL: options.baseURL }
+    )
 
-    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
-    nuxt.options.build.transpile.push(runtimeDir)
+    const { resolve } = createResolver(import.meta.url)
 
-    addPlugin(resolve(runtimeDir, 'plugin'))
+    addPlugin(resolve('./runtime/plugin'))
   },
 })
