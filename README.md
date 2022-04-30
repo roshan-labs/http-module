@@ -1,4 +1,4 @@
-# @roshan/nuxt-http-module
+# @roshan/http-module
 
 ## Development
 

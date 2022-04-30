@@ -1,5 +1,7 @@
 <template>
-  <div>Nuxt module playground!</div>
+  <div>{{ data }}</div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { data } = useTrack()
+</script>

@@ -1,12 +1,8 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt'
 
-import MyModule from '..'
+import HttpModule from '..'
 
 export default defineNuxtConfig({
-  modules: [MyModule],
-  publicRuntimeConfig: {
-    http: {
-      baseURL: 'https://api.github.com/',
-    },
-  },
+  ssr: false,
+  modules: [HttpModule],
 })
