@@ -1,6 +1,6 @@
 {
   "name": "@roshan-labs/http-module",
-  "version": "0.1.2-beta.0",
+  "version": "0.1.2-beta.1",
   "license": "MIT",
   "type": "module",
   "exports": {
