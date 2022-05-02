@@ -21,6 +21,9 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "standard-version"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
