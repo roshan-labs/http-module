@@ -2,9 +2,10 @@ import { addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
 import { defu } from 'defu'
 
 import { name, version } from '../package.json'
-import { ModuleOptions } from './runtime/types'
 
-export { ModuleOptions }
+export interface ModuleOptions {
+  baseURL: string
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
