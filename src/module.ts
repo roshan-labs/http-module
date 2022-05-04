@@ -24,6 +24,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     const { resolve } = createResolver(import.meta.url)
 
+    nuxt.options.build.transpile.push(resolve('./runtime'), 'await-to-js')
     addPlugin(resolve('./runtime/plugin'))
   },
 })
