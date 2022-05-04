@@ -1,1 +1,3 @@
-export default defineNuxtPlugin(() => {})
+export default defineNuxtPlugin(() => {
+  // const { $http } = useNuxtApp()
+})
