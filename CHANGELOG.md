@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2-beta.5](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.4...v0.1.2-beta.5) (2022-05-05)
+
+
+### Bug Fixes
+
+* types error ([9a0e3a7](https://github.com/roshan-labs/http-module/commit/9a0e3a7f55821c016af4e0d0f7808b238c1ab9f8))
+
 ### [0.1.2-beta.4](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.3...v0.1.2-beta.4) (2022-05-05)
 
 ### [0.1.2-beta.3](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.2...v0.1.2-beta.3) (2022-05-04)
