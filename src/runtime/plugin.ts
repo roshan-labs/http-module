@@ -3,13 +3,11 @@ import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import { createInstance } from './http'
 import { Instance } from './types'
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
   const http = createInstance(config.public.http)
 
-  return {
-    provide: { http },
-  }
+  nuxtApp.provide('http', http)
 })
 
 declare module '#app' {

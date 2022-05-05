@@ -1,7 +1,8 @@
-import { Http } from './core'
+import type { FetchOptions } from 'ohmyfetch'
 
-export type FetchOptions = Parameters<typeof $fetch>[1]
-export type SearchParams = FetchOptions['params']
+import { Http } from './http'
+
+export { FetchOptions }
 
 export interface Instance extends Http {
   create(options?: FetchOptions): Instance
