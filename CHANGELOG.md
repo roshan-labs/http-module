@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2-beta.6](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.5...v0.1.2-beta.6) (2022-05-05)
+
+
+### Bug Fixes
+
+* `useRequest` hasn't type ([ca9603e](https://github.com/roshan-labs/http-module/commit/ca9603ec43fe6733853dbe3d7e6ffeecc56b0b3f))
+
 ### [0.1.2-beta.5](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.4...v0.1.2-beta.5) (2022-05-05)
 
 
