@@ -1,7 +1,9 @@
 import { to } from 'await-to-js'
-import { useFetch } from '#app'
+import { useFetch } from '#imports'
 
 import { FetchOptions, Instance } from './types'
+
+type Result = ReturnType<typeof useFetch>
 
 export class Http {
   public options: FetchOptions
@@ -19,7 +21,7 @@ export class Http {
     )
   }
 
-  public useRequest<R>(url: string, options: FetchOptions = {}) {
+  public useRequest<R>(url: string, options: FetchOptions = {}): Result {
     return useFetch<R>(url, {
       ...this.options,
       ...options,
