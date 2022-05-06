@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2-beta.7](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.6...v0.1.2-beta.7) (2022-05-06)
+
 ### [0.1.2-beta.6](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.5...v0.1.2-beta.6) (2022-05-05)
 
 
