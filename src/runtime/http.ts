@@ -3,8 +3,6 @@ import { useFetch } from '#imports'
 
 import { FetchOptions, Instance } from './types'
 
-type Result = ReturnType<typeof useFetch>
-
 export class Http {
   public options: FetchOptions
 
@@ -21,7 +19,7 @@ export class Http {
     )
   }
 
-  public useRequest<R>(url: string, options: FetchOptions = {}): Result {
+  public useRequest<R>(url: string, options: FetchOptions = {}): ReturnType<typeof useFetch> {
     return useFetch<R>(url, {
       ...this.options,
       ...options,
