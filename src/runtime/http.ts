@@ -19,8 +19,8 @@ export class Http {
     )
   }
 
-  public useRequest<R>(url: string, options: FetchOptions = {}): ReturnType<typeof useFetch> {
-    return useFetch<R>(url, {
+  public useRequest: typeof useFetch = (url, options = {}) => {
+    return useFetch(url, {
       ...this.options,
       ...options,
     })
