@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2-bata.0](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.7...v0.1.2-bata.0) (2022-05-07)
+
+
+### Bug Fixes
+
+* `useRequest` options params type error ([9d07251](https://github.com/roshan-labs/http-module/commit/9d072519969667f11c27c06692e1b61e49ec1011))
+* export `useRequest` type ([a3c08bf](https://github.com/roshan-labs/http-module/commit/a3c08bfb2df03d506d92de93f14bc443fda1e861))
+
 ### [0.1.2-beta.7](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.6...v0.1.2-beta.7) (2022-05-06)
 
 ### [0.1.2-beta.6](https://github.com/roshan-labs/http-module/compare/v0.1.2-beta.5...v0.1.2-beta.6) (2022-05-05)
