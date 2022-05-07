@@ -2,8 +2,5 @@
   "extends": [
     "@nuxtjs/eslint-config-typescript",
     "plugin:prettier/recommended"
-  ],
-  "rules": {
-    "import/order": 0
-  }
+  ]
 }

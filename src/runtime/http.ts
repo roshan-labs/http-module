@@ -1,5 +1,5 @@
 import { to } from 'await-to-js'
-import { useFetch } from '#imports'
+import { useFetch } from '#app'
 
 import { FetchOptions, Instance } from './types'
 

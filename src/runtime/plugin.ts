@@ -1,4 +1,4 @@
-import { defineNuxtPlugin, useRuntimeConfig } from '#imports'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 import { createInstance } from './http'
 import { Instance } from './types'
