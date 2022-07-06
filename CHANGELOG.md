@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/roshan-labs/http-module/compare/v0.1.2...v0.1.3) (2022-07-06)
+
+
+### Bug Fixes
+
+* `$http` 无类型 ([0ea49a3](https://github.com/roshan-labs/http-module/commit/0ea49a3a91bfaeafd1af7bb53dbd8ce780d6b58b))
+
 ### [0.1.2](https://github.com/roshan-labs/http-module/compare/v0.1.2-bata.0...v0.1.2) (2022-05-07)
 
 
