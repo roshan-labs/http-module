@@ -1,6 +1,5 @@
 {
   "extends": [
-    "@nuxtjs/eslint-config-typescript",
-    "plugin:prettier/recommended"
+    "@roshan-labs/eslint-config"
   ]
 }
