@@ -1,6 +1,13 @@
-# @roshan/http-module
+# @roshan-labs/http-module
 
-## Development
+封装 `useFetch` 和 `$fetch`，可统一配置 `baseURL`
 
-- Run `npm run dev:prepare` to generate type stubs.
-- Use `npm run dev` to start [playground](./playground) in development mode.
+## 安装
+
+```bash
+yarn add @roshan-labs/http-module -D
+```
+
+## 许可
+
+MIT
