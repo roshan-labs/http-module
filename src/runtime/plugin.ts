@@ -1,5 +1,6 @@
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
+import type { Instance } from './types'
 import { createInstance } from './http'
 
 export default defineNuxtPlugin(() => {
@@ -10,3 +11,15 @@ export default defineNuxtPlugin(() => {
     provide: { http },
   }
 })
+
+interface PluginInjection {
+  $http: Instance
+}
+
+declare module '#app' {
+  interface NuxtApp extends PluginInjection {}
+}
+
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties extends PluginInjection {}
+}
