@@ -36,7 +36,7 @@
     "defu": "^6.0.0"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "latest",
+    "@nuxt/module-builder": "^0.1.7",
     "@roshan-labs/eslint-config": "^1.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.19.0",
