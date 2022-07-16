@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/roshan-labs/http-module/compare/v0.1.4...v0.1.5) (2022-07-16)
+
+
+### Features
+
+* 添加 http 注入类型 ([f6f890c](https://github.com/roshan-labs/http-module/commit/f6f890c9e31239bad3d5d517f66e138284240b3d))
+
 ### [0.1.4](https://github.com/roshan-labs/http-module/compare/v0.1.3...v0.1.4) (2022-07-15)
 
 ### [0.1.3](https://github.com/roshan-labs/http-module/compare/v0.1.2...v0.1.3) (2022-07-06)
