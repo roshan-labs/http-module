@@ -31,7 +31,7 @@
     }
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0-rc.5",
+    "@nuxt/kit": "^3.0.0-rc.6",
     "await-to-js": "^3.0.0",
     "defu": "^6.0.0"
   },
@@ -39,8 +39,8 @@
     "@nuxt/module-builder": "^0.1.7",
     "@roshan-labs/eslint-config": "^1.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.19.0",
-    "nuxt": "3.0.0-rc.5",
+    "eslint": "^8.20.0",
+    "nuxt": "3.0.0-rc.6",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0"
   }
