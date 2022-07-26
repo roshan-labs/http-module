@@ -1,5 +1,5 @@
 import { to } from 'await-to-js'
-import { useFetch } from '#app'
+import { useFetch } from 'nuxt/app'
 
 import { FetchOptions, Instance } from './types'
 
