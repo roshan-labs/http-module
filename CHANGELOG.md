@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/roshan-labs/http-module/compare/v0.1.6...v0.1.7) (2022-07-26)
+
+
+### Bug Fixes
+
+* useNuxtApp 能够正确导出 `$http` 类型 ([b2e4386](https://github.com/roshan-labs/http-module/commit/b2e4386495b6a33b3d7813ff8232245d8121e6a1))
+
 ### [0.1.6](https://github.com/roshan-labs/http-module/compare/v0.1.5...v0.1.6) (2022-07-24)
 
 ### [0.1.5](https://github.com/roshan-labs/http-module/compare/v0.1.4...v0.1.5) (2022-07-16)
