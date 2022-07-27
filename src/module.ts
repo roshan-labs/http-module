@@ -1,4 +1,4 @@
-import { addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
+import { addAutoImport, createResolver, defineNuxtModule } from '@nuxt/kit'
 import { defu } from 'defu'
 
 import { name, version } from '../package.json'
@@ -24,6 +24,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     const { resolve } = createResolver(import.meta.url)
 
-    addPlugin(resolve('./runtime/plugin'))
+    addAutoImport({ name: 'useHttp', as: 'useHttp', from: resolve('./runtime/composables') })
   },
 })
