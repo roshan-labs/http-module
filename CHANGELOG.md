@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/roshan-labs/http-module/compare/v0.1.7...v0.1.8) (2022-07-27)
+
+
+### Features
+
+* 组合式 API 方式使用请求，新增 get post put delete useGet usePost request useRequest 方法 ([47c45eb](https://github.com/roshan-labs/http-module/commit/47c45ebd6116895c2d1cf9f991155dbfa988d368))
+
 ### [0.1.7](https://github.com/roshan-labs/http-module/compare/v0.1.6...v0.1.7) (2022-07-26)
 
 
