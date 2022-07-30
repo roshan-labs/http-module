@@ -16,7 +16,6 @@
   ],
   "scripts": {
     "prepack": "npm run build",
-    "prepare": "npm run dev:prepare",
     "build": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
