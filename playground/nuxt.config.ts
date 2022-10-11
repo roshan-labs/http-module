@@ -1,9 +1,7 @@
-import { defineNuxtConfig } from 'nuxt'
-
-import HttpModule from '..'
+import Module from '..'
 
 export default defineNuxtConfig({
-  modules: [HttpModule],
+  modules: [Module],
   http: {
     baseURL: 'https://api.github.com/',
   },

@@ -32,16 +32,17 @@
     }
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0-rc.6",
+    "@nuxt/kit": "3.0.0-rc.11",
     "await-to-js": "^3.0.0",
-    "defu": "^6.0.0"
+    "defu": "^6.1.0",
+    "ohmyfetch": "^0.4.19"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.1.7",
     "@roshan-labs/eslint-config": "^1.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.20.0",
-    "nuxt": "3.0.0-rc.6",
+    "eslint": "^8.25.0",
+    "nuxt": "3.0.0-rc.11",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0"
   }
