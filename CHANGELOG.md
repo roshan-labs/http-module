@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.13](https://github.com/roshan-labs/http-module/compare/v0.1.12...v0.1.13) (2022-10-12)
+
+
+### Features
+
+* `useFetch` pass options ([f5b4f6f](https://github.com/roshan-labs/http-module/commit/f5b4f6fd99160744371bd938df7b6da8bfd7a6ae))
+
 ### [0.1.12](https://github.com/roshan-labs/http-module/compare/v0.1.11...v0.1.12) (2022-10-12)
 
 
