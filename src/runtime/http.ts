@@ -1,8 +1,8 @@
 import type { FetchOptions } from 'ohmyfetch'
-import type { UseFetchOptions } from '#app'
+import type { UseFetchOptions } from 'nuxt/app'
 import { to } from 'await-to-js'
 import { defu } from 'defu'
-import { useFetch } from '#app'
+import { useFetch } from '#imports'
 
 type Params = Record<string, any>
 
