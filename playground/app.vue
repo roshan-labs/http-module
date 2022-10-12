@@ -11,5 +11,5 @@ import { useHttp } from '#imports'
 
 const http = useHttp()
 
-const { data, error } = http.useGet('/users/gxmari007')
+const { data, error } = http.useGet<{ avatar_url: string; login: string }>('/users/gxmari007')
 </script>
