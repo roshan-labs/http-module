@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.15](https://github.com/roshan-labs/http-module/compare/v0.1.14...v0.1.15) (2022-10-14)
+
+
+### Bug Fixes
+
+* runtime 文件夹需要编译 ([ef0d24b](https://github.com/roshan-labs/http-module/commit/ef0d24beaefa0b7314da7993da2e9b5448206367))
+
 ### [0.1.14](https://github.com/roshan-labs/http-module/compare/v0.1.13...v0.1.14) (2022-10-14)
 
 
