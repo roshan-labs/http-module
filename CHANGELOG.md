@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/roshan-labs/http-module/compare/v0.1.13...v0.1.14) (2022-10-14)
+
+
+### Bug Fixes
+
+* 引入另一个 module 时会报 `#app` 没有路径 ([894a128](https://github.com/roshan-labs/http-module/commit/894a1284839dca5ccef8449ba4e71bfb572ea97b))
+
 ### [0.1.13](https://github.com/roshan-labs/http-module/compare/v0.1.12...v0.1.13) (2022-10-12)
 
 
