@@ -1,8 +1,8 @@
 import type { FetchOptions } from 'ohmyfetch'
 import { defu } from 'defu'
+import { useRuntimeConfig } from 'nuxt/app'
 
 import { Http } from './http'
-import { useRuntimeConfig } from '#imports'
 
 let http: Http | null = null
 
