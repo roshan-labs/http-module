@@ -1,3 +1,12 @@
+
+
+### [0.1.16](https://github.com/roshan-labs/http-module/compare/v0.1.15...v0.1.16) (2022-10-28)
+
+
+### Bug Fixes
+
+* use 类型方法没有返回类型 ([59264a2](https://github.com/roshan-labs/http-module/commit/59264a2a7d87166773ed018f0bda4595dd34b4c0))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
