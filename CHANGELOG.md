@@ -1,5 +1,12 @@
 
 
+### [0.1.17](https://github.com/roshan-labs/http-module/compare/v0.1.16...v0.1.17) (2022-10-31)
+
+
+### Bug Fixes
+
+* use 请求方式没有响应式 ([af29355](https://github.com/roshan-labs/http-module/commit/af293552beca5a8a69db3613bafc4f519c613bf3))
+
 ### [0.1.16](https://github.com/roshan-labs/http-module/compare/v0.1.15...v0.1.16) (2022-10-28)
 
 
