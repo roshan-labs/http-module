@@ -1,8 +1,10 @@
+import type { Ref } from 'vue'
 import type { FetchOptions } from 'ohmyfetch'
 import type { UseFetchOptions } from 'nuxt/app'
 import { to } from 'await-to-js'
 import { defu } from 'defu'
-import { useFetch } from 'nuxt/app'
+import { isRef } from 'vue'
+import { useAsyncData } from 'nuxt/app'
 
 type Params = Record<string, any>
 
@@ -34,16 +36,6 @@ export class Http {
   }
 
   /**
-   * 组合式 http 请求
-   * @param url 请求地址
-   * @param options useFetch 配置参数
-   * @returns 响应式请求结果
-   */
-  public useRequest<R = any>(url: string, options: UseFetchOptions<R> = {}) {
-    return useFetch(url, defu(options, this.options))
-  }
-
-  /**
    * get 请求
    * @param url 请求地址
    * @param params 请求参数
@@ -54,15 +46,21 @@ export class Http {
     return this.request<R>(url, defu({ method: 'GET', params }, options, this.options))
   }
 
-  /**
-   * 组合式 get 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param options useFetch 配置参数
-   * @returns 响应式请求结果
-   */
-  public useGet<R = any>(url: string, params: Params = {}, options: UseFetchOptions<R> = {}) {
-    return this.useRequest<R>(url, defu({ method: 'GET', params }, options, this.options))
+  public useGet<R = any>(
+    url: string | Ref<string>,
+    params: Params | Ref<Params> = {},
+    options: UseFetchOptions<R> = {}
+  ) {
+    const _options = defu(options, this.options)
+
+    return useAsyncData<R>(
+      () =>
+        $fetch(
+          isRef(url) ? url.value : url,
+          defu({ method: 'get', params: isRef(params) ? params.value : params }, _options)
+        ),
+      _options
+    )
   }
 
   /**
@@ -76,15 +74,21 @@ export class Http {
     return this.request<R>(url, defu({ method: 'POST', body: params }, options, this.options))
   }
 
-  /**
-   * 组合式 post 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param options useFetch 配置参数
-   * @returns 响应式请求结果
-   */
-  public usePost<R = any>(url: string, params: Params = {}, options: UseFetchOptions<R> = {}) {
-    return this.useRequest<R>(url, defu({ method: 'POST', body: params }, options, this.options))
+  public usePost<R = any>(
+    url: string | Ref<string>,
+    params: Params | Ref<Params> = {},
+    options: UseFetchOptions<R> = {}
+  ) {
+    const _options = defu(options, this.options)
+
+    return useAsyncData<R>(
+      () =>
+        $fetch(
+          isRef(url) ? url.value : url,
+          defu({ method: 'post', body: isRef(params) ? params.value : params }, _options)
+        ),
+      _options
+    )
   }
 
   /**

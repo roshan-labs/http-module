@@ -2,14 +2,28 @@
   <div>
     <div>http module test</div>
     <h3>Github</h3>
-    <div v-if="!error">{{ data }}</div>
+    {{ params }}
+    <div>
+      <button @click="changeParams">Change Params</button>
+      <button @click="execute()">Refresh</button>
+    </div>
+    <div v-if="!pending">{{ data }}</div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { useHttp } from '#imports'
+import { useHttp, ref } from '#imports'
 
-const http = useHttp()
+const params = ref({
+  username: 'gaoxiang',
+})
+const { data, pending, execute } = useHttp().useGet<{
+  avatar_url: string
+  login: string
+}>('/users/gxmari007', params)
 
-const { data, error } = http.useGet<{ avatar_url: string; login: string }>('/users/gxmari007')
+const changeParams = () => {
+  params.value = { username: 'gx' }
+  execute()
+}
 </script>
