@@ -1,5 +1,7 @@
 
 
+### [0.1.19](https://github.com/roshan-labs/http-module/compare/v0.1.18...v0.1.19) (2022-11-01)
+
 ### [0.1.18](https://github.com/roshan-labs/http-module/compare/v0.1.17...v0.1.18) (2022-11-01)
 
 
