@@ -1,5 +1,12 @@
 
 
+### [0.1.18](https://github.com/roshan-labs/http-module/compare/v0.1.17...v0.1.18) (2022-11-01)
+
+
+### Bug Fixes
+
+* 请求 api 支持传入响应式变量作为参数 ([33b1aca](https://github.com/roshan-labs/http-module/commit/33b1aca35e8e300e5eed7e6e166692a1a7bed085))
+
 ### [0.1.17](https://github.com/roshan-labs/http-module/compare/v0.1.16...v0.1.17) (2022-10-31)
 
 
