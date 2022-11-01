@@ -5,7 +5,6 @@ specifiers:
   '@nuxt/module-builder': ^0.1.7
   '@release-it/conventional-changelog': ^5.1.1
   '@roshan-labs/eslint-config': ^1.1.0
-  await-to-js: ^3.0.0
   cz-conventional-changelog: ^3.3.0
   defu: ^6.1.0
   eslint: ^8.26.0
@@ -16,7 +15,6 @@ specifiers:
 
 dependencies:
   '@nuxt/kit': 3.0.0-rc.12
-  await-to-js: 3.0.0
   defu: 6.1.0
   ohmyfetch: 0.4.20
 
@@ -1777,11 +1775,6 @@ packages:
       postcss: 8.4.18
       postcss-value-parser: 4.2.0
     dev: true
-
-  /await-to-js/3.0.0:
-    resolution: {integrity: sha512-zJAaP9zxTcvTHRlejau3ZOY4V7SRpiByf3/dxx2uyKxxor19tpmpV2QRsTKikckwhaPmr2dVpxxMr7jOCYVp5g==}
-    engines: {node: '>=6.0.0'}
-    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}

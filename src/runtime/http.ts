@@ -1,7 +1,6 @@
 import type { Ref } from 'vue'
 import type { FetchOptions } from 'ohmyfetch'
 import type { UseFetchOptions } from 'nuxt/app'
-import { to } from 'await-to-js'
 import { defu } from 'defu'
 import { isRef } from 'vue'
 import { useAsyncData } from 'nuxt/app'
@@ -64,7 +63,7 @@ export class Http {
   }
 
   public request<R = any>(url: string, options: FetchOptions = {}) {
-    return to<R>($fetch(url, defu(options, this.options)))
+    return $fetch<R>(url, defu(options, this.options))
   }
 
   public get<R = any>(
