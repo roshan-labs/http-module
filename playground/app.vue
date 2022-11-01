@@ -12,15 +12,13 @@
 </template>
 
 <script lang="ts" setup>
-import { useHttp, ref } from '#imports'
+import { useHttp, ref, useAsyncData } from '#imports'
 
 const params = ref({
   username: 'gaoxiang',
 })
-const { data, pending, execute } = useHttp().useGet<{
-  avatar_url: string
-  login: string
-}>('/users/gxmari007', params)
+
+const { data, pending, execute } = useAsyncData(() => useHttp().get('/users/gxmari007', params))
 
 const changeParams = () => {
   params.value = { username: 'gx' }

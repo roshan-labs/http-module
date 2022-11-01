@@ -25,53 +25,23 @@ export class Http {
     return new Http(defu(options, this.options))
   }
 
-  /**
-   * http 请求
-   * @param url 请求地址
-   * @param options useFetch 配置参数
-   * @returns Promise 结构请求结果
-   */
-  public request<R = any>(url: string, options: FetchOptions = {}) {
-    return to<R>($fetch(url, defu(options, this.options)))
-  }
-
-  /**
-   * get 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param options $fetch 配置参数
-   * @returns Promise 结构 get 请求结果
-   */
-  public get<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
-    return this.request<R>(url, defu({ method: 'GET', params }, options, this.options))
-  }
-
   public useGet<R = any>(
     url: string | Ref<string>,
     params: Params | Ref<Params> = {},
     options: UseFetchOptions<R> = {}
   ) {
+    const _url = isRef(url) ? url.value : url
     const _options = defu(options, this.options)
 
     return useAsyncData<R>(
+      _url,
       () =>
         $fetch(
-          isRef(url) ? url.value : url,
+          _url,
           defu({ method: 'get', params: isRef(params) ? params.value : params }, _options)
         ),
       _options
     )
-  }
-
-  /**
-   * post 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param options $fetch 配置参数
-   * @returns Promise 结构 post 请求结果
-   */
-  public post<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
-    return this.request<R>(url, defu({ method: 'POST', body: params }, options, this.options))
   }
 
   public usePost<R = any>(
@@ -79,37 +49,65 @@ export class Http {
     params: Params | Ref<Params> = {},
     options: UseFetchOptions<R> = {}
   ) {
+    const _url = isRef(url) ? url.value : url
     const _options = defu(options, this.options)
 
     return useAsyncData<R>(
+      _url,
       () =>
         $fetch(
-          isRef(url) ? url.value : url,
+          _url,
           defu({ method: 'post', body: isRef(params) ? params.value : params }, _options)
         ),
       _options
     )
   }
 
-  /**
-   * put 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param options $fetch 配置参数
-   * @returns Promise 结构 put 请求结果
-   */
-  public put<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
-    return this.request<R>(url, defu({ method: 'PUT', body: params }, options, this.options))
+  public request<R = any>(url: string, options: FetchOptions = {}) {
+    return to<R>($fetch(url, defu(options, this.options)))
   }
 
-  /**
-   * delete 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param options $fetch 配置参数
-   * @returns Promise 结构 delete 请求结果
-   */
-  public delete<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
-    return this.request<R>(url, defu({ method: 'DELETE', body: params }, options, this.options))
+  public get<R = any>(
+    url: string | Ref<string>,
+    params: Params | Ref<Params> = {},
+    options: FetchOptions = {}
+  ) {
+    const _url = isRef(url) ? url.value : url
+    const _params = isRef(params) ? params.value : params
+
+    return this.request<R>(_url, defu({ method: 'GET', params: _params }, options, this.options))
+  }
+
+  public post<R = any>(
+    url: string | Ref<string>,
+    params: Params | Ref<Params> = {},
+    options: FetchOptions = {}
+  ) {
+    const _url = isRef(url) ? url.value : url
+    const _params = isRef(params) ? params.value : params
+
+    return this.request<R>(_url, defu({ method: 'POST', body: _params }, options, this.options))
+  }
+
+  public put<R = any>(
+    url: string | Ref<string>,
+    params: Params | Ref<Params> = {},
+    options: FetchOptions = {}
+  ) {
+    const _url = isRef(url) ? url.value : url
+    const _params = isRef(params) ? params.value : params
+
+    return this.request<R>(_url, defu({ method: 'PUT', body: _params }, options, this.options))
+  }
+
+  public delete<R = any>(
+    url: string | Ref<string>,
+    params: Params | Ref<Params> = {},
+    options: FetchOptions = {}
+  ) {
+    const _url = isRef(url) ? url.value : url
+    const _params = isRef(params) ? params.value : params
+
+    return this.request<R>(_url, defu({ method: 'DELETE', body: _params }, options, this.options))
   }
 }
