@@ -1,5 +1,12 @@
 
 
+## [0.2.0](https://github.com/roshan-labs/http-module/compare/v0.1.19...v0.2.0) (2022-11-11)
+
+
+### Features
+
+* 支持子目录 `/type` 导出类型 ([6352451](https://github.com/roshan-labs/http-module/commit/6352451abdd55261d3e19aa585352e37fde94880))
+
 ### [0.1.19](https://github.com/roshan-labs/http-module/compare/v0.1.18...v0.1.19) (2022-11-01)
 
 ### [0.1.18](https://github.com/roshan-labs/http-module/compare/v0.1.17...v0.1.18) (2022-11-01)
