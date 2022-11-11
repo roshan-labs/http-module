@@ -1,5 +1,4 @@
 import { addImports, createResolver, defineNuxtModule } from '@nuxt/kit'
-import { defu } from 'defu'
 
 import { name, version } from '../package.json'
 
@@ -17,10 +16,10 @@ export default defineNuxtModule<ModuleOptions>({
     baseURL: '/',
   },
   setup(options, nuxt) {
-    nuxt.options.runtimeConfig.public.http = options = defu(
-      nuxt.options.runtimeConfig.public.http,
-      { baseURL: options.baseURL }
-    )
+    nuxt.options.runtimeConfig.public.http = options = {
+      ...nuxt.options.runtimeConfig.public.http,
+      ...options,
+    }
 
     const { resolve } = createResolver(import.meta.url)
 

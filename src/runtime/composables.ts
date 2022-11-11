@@ -1,8 +1,7 @@
 import type { FetchOptions } from 'ohmyfetch'
-import { defu } from 'defu'
-import { useRuntimeConfig } from 'nuxt/app'
 
 import { Http } from './http'
+import { useRuntimeConfig } from '#imports'
 
 let http: Http | null = null
 
@@ -10,7 +9,10 @@ export function useHttp(options: FetchOptions = {}) {
   if (!http) {
     const config = useRuntimeConfig()
 
-    http = new Http(defu(options, config.public.http))
+    http = new Http({
+      ...config.public.http,
+      ...options,
+    })
   }
 
   return http
