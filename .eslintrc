@@ -1,8 +1,6 @@
 {
-  "extends": [
-    "@roshan-labs/eslint-config"
-  ],
+  "extends": ["@roshan-labs/eslint-config"],
   "rules": {
-    "require-await": "off"
+    "require-await": 0
   }
 }

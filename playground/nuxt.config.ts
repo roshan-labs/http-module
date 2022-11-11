@@ -1,8 +1,5 @@
-import Module from '..'
-
 export default defineNuxtConfig({
-  ssr: false,
-  modules: [Module],
+  modules: ['@roshan-labs/http-module'],
   http: {
     baseURL: 'https://api.github.com/',
   },

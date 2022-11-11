@@ -1,11 +1,9 @@
 import type { Ref } from 'vue'
 import type { FetchOptions } from 'ohmyfetch'
-import type { UseFetchOptions } from 'nuxt/app'
 import { defu } from 'defu'
 import { isRef } from 'vue'
-import { useAsyncData } from 'nuxt/app'
 
-type Params = Record<string, any>
+export type Params = Record<string, any>
 
 export class Http {
   /** $fetch 配置参数 */
@@ -22,44 +20,6 @@ export class Http {
    */
   public create(options: FetchOptions = {}): Http {
     return new Http(defu(options, this.options))
-  }
-
-  public useGet<R = any>(
-    url: string | Ref<string>,
-    params: Params | Ref<Params> = {},
-    options: UseFetchOptions<R> = {}
-  ) {
-    const _url = isRef(url) ? url.value : url
-    const _options = defu(options, this.options)
-
-    return useAsyncData<R>(
-      _url,
-      () =>
-        $fetch(
-          _url,
-          defu({ method: 'get', params: isRef(params) ? params.value : params }, _options)
-        ),
-      _options
-    )
-  }
-
-  public usePost<R = any>(
-    url: string | Ref<string>,
-    params: Params | Ref<Params> = {},
-    options: UseFetchOptions<R> = {}
-  ) {
-    const _url = isRef(url) ? url.value : url
-    const _options = defu(options, this.options)
-
-    return useAsyncData<R>(
-      _url,
-      () =>
-        $fetch(
-          _url,
-          defu({ method: 'post', body: isRef(params) ? params.value : params }, _options)
-        ),
-      _options
-    )
   }
 
   public request<R = any>(url: string, options: FetchOptions = {}) {
