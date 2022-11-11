@@ -1,5 +1,12 @@
 
 
+## [0.2.0](https://github.com/roshan-labs/http-module/compare/v0.1.19...v0.2.0) (2022-11-11)
+
+
+### Features
+
+* 移除 use 请求方式，优化代码结构 ([c3d0e65](https://github.com/roshan-labs/http-module/commit/c3d0e655f68d782949002580303815e1364fe5a4))
+
 ### [0.1.19](https://github.com/roshan-labs/http-module/compare/v0.1.18...v0.1.19) (2022-11-01)
 
 ### [0.1.18](https://github.com/roshan-labs/http-module/compare/v0.1.17...v0.1.18) (2022-11-01)

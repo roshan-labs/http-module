@@ -1,6 +1,6 @@
 {
   "name": "@roshan-labs/http-module",
-  "version": "0.1.19",
+  "version": "0.2.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/module.cjs",
@@ -14,7 +14,9 @@
   },
   "typesVersions": {
     "*": {
-      "type": ["./dist/runtime/http.d.ts"]
+      "type": [
+        "./dist/runtime/http.d.ts"
+      ]
     }
   },
   "files": [
