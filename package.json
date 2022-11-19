@@ -1,6 +1,7 @@
 {
   "name": "@roshan-labs/http-module",
   "version": "0.2.0",
+  "author": "Xiang Gao",
   "license": "MIT",
   "type": "module",
   "main": "./dist/module.cjs",
@@ -39,16 +40,16 @@
     }
   },
   "dependencies": {
-    "@nuxt/kit": "3.0.0-rc.12",
+    "@nuxt/kit": "^3.0.0",
     "ohmyfetch": "^0.4.21"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "^0.1.7",
+    "@nuxt/module-builder": "^0.2.1",
     "@release-it/conventional-changelog": "^5.1.1",
     "@roshan-labs/eslint-config": "^1.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.26.0",
-    "nuxt": "3.0.0-rc.12",
+    "eslint": "^8.28.0",
+    "nuxt": "3.0.0",
     "prettier": "^2.7.1",
     "release-it": "^15.5.0"
   }

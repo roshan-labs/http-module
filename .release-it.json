@@ -1,12 +1,10 @@
 {
-  "npm": {
-    "skipChecks": false
-  },
   "git": {
     "commitMessage": "chore: release v${version}"
   },
   "github": {
-    "release": true
+    "release": true,
+    "web": true
   },
   "plugins": {
     "@release-it/conventional-changelog": {

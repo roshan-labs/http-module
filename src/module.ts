@@ -1,15 +1,12 @@
 import { addImports, createResolver, defineNuxtModule } from '@nuxt/kit'
 
-import { name, version } from '../package.json'
-
 export interface ModuleOptions {
   baseURL: string
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name,
-    version,
+    name: '@roshan-labs/http-module',
     configKey: 'http',
   },
   defaults: {
