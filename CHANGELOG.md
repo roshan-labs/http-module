@@ -1,5 +1,12 @@
 
 
+## [0.3.0](https://github.com/roshan-labs/http-module/compare/v0.2.0...v0.3.0) (2022-11-19)
+
+
+### Features
+
+* update to nuxt 3.0.0 ([d1f1c5f](https://github.com/roshan-labs/http-module/commit/d1f1c5fa7842bb33867fd1487c7d7e4d157f527a))
+
 ## [0.2.0](https://github.com/roshan-labs/http-module/compare/v0.1.19...v0.2.0) (2022-11-11)
 
 
