@@ -1,7 +1,7 @@
 import type { FetchOptions } from 'ohmyfetch'
 
+import { useRuntimeConfig } from '#app'
 import { Http } from './http'
-import { useRuntimeConfig } from '#imports'
 
 let http: Http | null = null
 
