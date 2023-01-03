@@ -1,5 +1,5 @@
 import type { Ref } from 'vue'
-import type { FetchOptions } from 'ohmyfetch'
+import type { FetchOptions } from 'ofetch'
 import { isRef } from 'vue'
 import 'nuxt/app'
 

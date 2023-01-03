@@ -10,8 +10,7 @@
     ".": {
       "import": "./dist/module.mjs",
       "require": "./dist/module.cjs"
-    },
-    "./type": "./dist/runtime/http.mjs"
+    }
   },
   "typesVersions": {
     "*": {
@@ -41,16 +40,16 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0",
-    "ohmyfetch": "^0.4.21"
+    "ofetch": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.2.1",
     "@release-it/conventional-changelog": "^5.1.1",
     "@roshan-labs/eslint-config": "^1.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.28.0",
-    "nuxt": "3.0.0",
+    "eslint": "^8.31.0",
+    "nuxt": "^3.0.0",
     "prettier": "^2.7.1",
-    "release-it": "^15.5.0"
+    "release-it": "^15.6.0"
   }
 }

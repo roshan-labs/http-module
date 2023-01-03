@@ -1,4 +1,4 @@
-import type { FetchOptions } from 'ohmyfetch'
+import type { FetchOptions } from 'ofetch'
 
 import { useRuntimeConfig } from '#app'
 import { Http } from './http'

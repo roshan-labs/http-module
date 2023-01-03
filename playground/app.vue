@@ -18,7 +18,9 @@ const params = ref({
   username: 'gaoxiang',
 })
 
-const { data, pending, execute } = useAsyncData(() => useHttp().get('/users/gxmari007', params))
+const { data, pending, execute } = useAsyncData(() =>
+  useHttp().get('/users/gxmari007', params.value)
+)
 
 const changeParams = () => {
   params.value = { username: 'gx' }
