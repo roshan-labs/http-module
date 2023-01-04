@@ -1,6 +1,4 @@
-import type { Ref } from 'vue'
 import type { FetchOptions } from 'ofetch'
-import { isRef } from 'vue'
 import 'nuxt/app'
 
 type Params = Record<string, any>
@@ -25,6 +23,11 @@ export class Http {
     })
   }
 
+  /**
+   * 发送一个自定义请求
+   * @param url 请求地址
+   * @param options ofetch options
+   */
   public request<R = any>(url: string, options: FetchOptions = {}) {
     return $fetch<R>(url, {
       ...this.options,
@@ -32,67 +35,63 @@ export class Http {
     })
   }
 
-  public get<R = any>(
-    url: string | Ref<string>,
-    params: Params | Ref<Params> = {},
-    options: FetchOptions = {}
-  ) {
-    const _url = isRef(url) ? url.value : url
-    const _params = isRef<Params>(params) ? params.value : params
-
-    return this.request<R>(_url, {
+  /**
+   * 发送 get 请求
+   * @param url 请求地址
+   * @param params 请求参数
+   * @param options ofetch options
+   */
+  public get<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
+    return this.request<R>(url, {
       ...this.options,
       ...options,
       method: 'get',
-      params: _params,
+      params,
     })
   }
 
-  public post<R = any>(
-    url: string | Ref<string>,
-    params: Params | Ref<Params> = {},
-    options: FetchOptions = {}
-  ) {
-    const _url = isRef(url) ? url.value : url
-    const _params = isRef<Params>(params) ? params.value : params
-
-    return this.request<R>(_url, {
+  /**
+   * 发送 post 请求
+   * @param url 请求地址
+   * @param params 请求参数
+   * @param options ofetch options
+   */
+  public post<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
+    return this.request<R>(url, {
       ...this.options,
       ...options,
       method: 'post',
-      body: _params,
+      body: params,
     })
   }
 
-  public put<R = any>(
-    url: string | Ref<string>,
-    params: Params | Ref<Params> = {},
-    options: FetchOptions = {}
-  ) {
-    const _url = isRef(url) ? url.value : url
-    const _params = isRef<Params>(params) ? params.value : params
-
-    return this.request<R>(_url, {
+  /**
+   * 发送 put 请求
+   * @param url 请求地址
+   * @param params 请求参数
+   * @param options ofetch options
+   */
+  public put<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
+    return this.request<R>(url, {
       ...this.options,
       ...options,
       method: 'put',
-      body: _params,
+      body: params,
     })
   }
 
-  public delete<R = any>(
-    url: string | Ref<string>,
-    params: Params | Ref<Params> = {},
-    options: FetchOptions = {}
-  ) {
-    const _url = isRef(url) ? url.value : url
-    const _params = isRef<Params>(params) ? params.value : params
-
-    return this.request<R>(_url, {
+  /**
+   * 发送 delete 请求
+   * @param url 请求地址
+   * @param params 请求参数
+   * @param options ofetch options
+   */
+  public delete<R = any>(url: string, params: Params = {}, options: FetchOptions = {}) {
+    return this.request<R>(url, {
       ...this.options,
       ...options,
       method: 'delete',
-      body: _params,
+      body: params,
     })
   }
 }
