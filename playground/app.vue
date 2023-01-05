@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <div>http module test</div>
-    <h3>Github</h3>
-    {{ params }}
+  <NuxtErrorBoundary @error="onError">
     <div>
-      <button @click="changeParams">Change Params</button>
-      <button @click="execute()">Refresh</button>
+      <div>http module test</div>
+      <h3>Github</h3>
+      {{ params }}
+      <div>
+        <button @click="changeParams">Change Params</button>
+        <button @click="execute()">Refresh</button>
+      </div>
+      <div v-if="!pending">{{ data }}</div>
     </div>
-    <div v-if="!pending">{{ data }}</div>
-  </div>
+  </NuxtErrorBoundary>
 </template>
 
 <script lang="ts" setup>
@@ -18,12 +20,14 @@ const params = ref({
   username: 'gaoxiang',
 })
 
-const { data, pending, execute } = useAsyncData(() =>
-  useHttp().get('/users/gxmari007', params.value)
-)
+const { data, pending, execute } = useAsyncData(() => useHttp().request('http://google.com/404'))
 
 const changeParams = () => {
   params.value = { username: 'gx' }
   execute()
+}
+
+const onError = () => {
+  console.log('error')
 }
 </script>
