@@ -1,5 +1,12 @@
 
 
+## [0.5.0](https://github.com/roshan-labs/http-module/compare/v0.4.0...v0.5.0) (2023-01-06)
+
+
+### Features
+
+* 请求参数改为普通对象 ([eba0225](https://github.com/roshan-labs/http-module/commit/eba0225cdeff2baeacf145b89b9de1d5e99c6812))
+
 ## [0.4.0](https://github.com/roshan-labs/http-module/compare/v0.2.0...v0.4.0) (2022-11-19)
 
 
