@@ -1,5 +1,4 @@
 import type { FetchOptions } from 'ofetch'
-import { createError } from '#imports'
 import 'nuxt/app'
 
 type Params = Record<string, any>
@@ -33,8 +32,6 @@ export class Http {
     return $fetch<R>(url, {
       ...this.options,
       ...options,
-    }).catch((error) => {
-      return createError(error)
     })
   }
 
