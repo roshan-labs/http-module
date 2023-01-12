@@ -45,11 +45,11 @@
   "devDependencies": {
     "@nuxt/module-builder": "^0.2.1",
     "@release-it/conventional-changelog": "^5.1.1",
-    "@roshan-labs/eslint-config": "^1.1.0",
+    "@roshan-labs/eslint-config": "^1.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.31.0",
     "nuxt": "^3.0.0",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.2",
     "release-it": "^15.6.0"
   }
 }
