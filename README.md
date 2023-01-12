@@ -1,6 +1,6 @@
 # @roshan-labs/http-module
 
-封装内部 `$fetch` 和 `useFetch` 方法，可统一配置 `baseURL`，新建实例也可继承老配置
+封装 nuxt `$fetch` 方法，统一配置 `baseURL`
 
 ## 安装
 
@@ -33,6 +33,6 @@ useHttp().request(url, options)
 - url: 请求地址
 - options: `$fetch` 配置参数
 
-## 许可
+## License
 
 MIT
